@@ -1,0 +1,41 @@
+//
+// This example generates a white 
+// background on which the user
+// can spray figures using the mouse
+//
+
+int lastX = 0
+int lastY = 0
+
+reset
+clear 255 255 255
+hideTurtle
+
+sub mouseDragged x y
+  antialiasingOn
+  penColor 0 0 0
+  ptLine x y lastX lastY
+  lastX = x
+  lastY = y
+end sub
+
+sub mouseMoved x y
+  lastX = x
+  lastY = y
+end sub
+
+sub ptLine x1 y1 x2 y2
+  float dist = [sqrt (x1 - x2) * (x1 - x2) + _
+    (y1 - y2) * (y1 - y2)]
+  float normX = (x1 - x2) / dist
+  float normY = (y1 - y2) / dist
+  float i = 0
+  float brushRadius = 10
+  while i < dist
+    point x2 + normX * i + _
+      [rand -brushRadius brushRadius] _
+        y2 + normY * i + [rand -brushRadius brushRadius]
+    
+    i += 3.0 / brushRadius
+  end while
+end sub

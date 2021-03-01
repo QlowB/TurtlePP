@@ -1,0 +1,21 @@
+<!-- Ant build file -->
+<project default="compile">
+    <target name="compile">
+        <mkdir dir="bin"/>
+        <javac srcdir="src" destdir="bin"/>
+        <copy todir="bin">
+            <fileset dir="src">
+                <include name="**/*.xml"/>
+                <include name="**/*.txt"/>
+                <include name="**/*.html"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="build-jar" depends="compile">
+        <manifest file="MANIFEST.MF">
+            <attribute name="Main-Class" value="turtlepp.TurtlePP"/>
+            <attribute name="Class-Path" value="."/>
+        </manifest>
+        <jar destfile="TurtlePP.jar" basedir="bin" manifest="MANIFEST.MF"/>
+    </target>
+</project>

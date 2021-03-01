@@ -1,0 +1,46 @@
+reset
+hideTurtle
+
+int x = 0
+while x < 600
+  int y = 0
+  while y < 600
+    int iter = [iterate x y] * 8
+    penColor iter iter iter
+    point x y
+    y += 3
+  end while
+  x += 3
+end while
+
+function iterate x y
+  float a = (x - 460)
+  a *= 0.005
+  float b = (y - 300)
+  b *= 0.005
+  
+  float cx = a
+  float cy = b
+  
+  int n = 0
+  repeat 30
+    float aa = a * a
+    float bb = b * b
+    float ab2 = a * b + a * b
+    
+    float test = aa + bb
+    if test >= 16.0
+      iterate = n
+      exit function
+    end if
+    
+    a = aa
+    a -= bb
+    b = ab2
+    
+    a += cx
+    b += cy
+    n += 1
+  end repeat
+  iterate = 0
+end function

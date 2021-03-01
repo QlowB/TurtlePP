@@ -1,0 +1,23 @@
+reset
+hideTurtle
+antialiasingOn
+translate [width] / 2 [height] / 2
+sier 7 0 (-230.940) (-200) 115.470 200 115.470
+
+sub sier depth x1 y1 x2 y2 x3 y3
+  if depth <= 0
+    triangle x1 y1 x2 y2 x3 y3
+    exit sub
+  end if
+  
+  float x12 = (x1 + x2) * 0.5
+  float y12 = (y1 + y2) * 0.5
+  float x23 = (x2 + x3) * 0.5
+  float y23 = (y2 + y3) * 0.5
+  float x13 = (x1 + x3) * 0.5
+  float y13 = (y1 + y3) * 0.5
+  
+  sier depth - 1 x1 y1 x12 y12 x13 y13
+  sier depth - 1 x2 y2 x12 y12 x23 y23
+  sier depth - 1 x3 y3 x23 y23 x13 y13
+end sub

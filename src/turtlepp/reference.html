@@ -1,0 +1,875 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body style="font-family: Verdana;">
+		<h1>
+			Turtle++ Reference</h1>
+		<h3>
+			Data Types</h3>
+		<p>
+			There are six different data types in Turtle++</p>
+		<table border="2" style="width: 100%;" frame="void">
+				<tr>
+					<td>
+						
+                        <a href="datatype:Int"><font face="Courier New" color="#0000FF">Int</font></a></td>
+					<td>
+						Integer value</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="datatype:Float"><font face="Courier New" color="#0000FF">Float</font></a></td>
+					<td>
+						Real value</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="datatype:Boolean"><font face="Courier New" color="#0000FF">Boolean</font></a></td>
+					<td>
+						<a href="constant:False"><font color="#800000" face="Courier New">True</font></a> or 
+                        <a href="constant:False"><font color="#800000" face="Courier New">False</font></a></td>
+				</tr>
+				<tr>
+					<td>
+						<a href="datatype:Char"><font face="Courier New" color="#0000FF">Char</font></a></td>
+					<td>
+						Character</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="datatype:String"><font face="Courier New" color="#0000FF">String</font></a></td>
+					<td>
+						Text</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="datatype:Ref"><font face="Courier New" color="#0000FF">Ref</font></a></td>
+					<td>
+						Reference to a variable</td>
+				</tr>
+		</table>
+		<p>
+			Variablen k&ouml;nnen ebenfalls direkt durch Ausdr&uuml;cke initialisiert werden</p>
+		<p>
+			<span style="font-family:courier new,courier,monospace;"><span style="color: rgb(0, 0, 255);">Int</span><span style="color: rgb(0, 0, 255);">&nbsp;</span>five<span style="color: rgb(0, 0, 255);"> </span>=<span style="color: rgb(0, 0, 255);"> <span style="color: rgb(255, 0, 0);">5</span></span><br style="font-family: monospace;" />
+			<span style="color: rgb(0, 0, 255);">Float</span>&nbsp;six =
+            <span style="color: #FF0000">3.0 </span>+<span style="color: #FF0000"> 
+            3.0</span><br />
+			</span>
+			<span style="font-family:courier new,courier,monospace;">
+			<span style="color: rgb(0, 0, 255);">Int</span>&nbsp;alsoSix = six<br>
+            </span>
+			<span style="font-family:courier new,courier,monospace;">
+            <span style="color: #0000FF">Boolean</span>&nbsp;threeGreaterSix = 
+            <font color="#FF0000">3</font> &gt; <font color="#FF0000">6<br>
+            </font> <font color="#0000FF">Char</font>&nbsp;zeichen =
+            <font color="#000080">'r'</font></span><span style="font-family:courier new,courier,monospace;"><br>
+            <span style="color: #0000FF">String</span> text =
+            <font color="#000080">&quot;Hello World!&quot;<br>
+            </font>
+            <font color="#0000FF">Ref</font><font color="#000080"> </font>
+            changeText = text</span></p>
+		<p>
+			Der Datentyp <font color="#0000FF">
+            <span style="font-family: 'courier new',courier,monospace">Ref</span></font> stellt eine Referenz auf eine Variable dar. Einmal initialisiert 
+            kann die Referenz nicht mehr ge&auml;ndert werden. &Auml;ndert man die 
+            Variable, so wird die urspr&uuml;nglich zugewiesene Variable ebenfalls 
+            ver&auml;ndert. W&uuml;rde man hier
+            <span style="font-family: 'courier new',courier,monospace">
+            changeText</span> ver&auml;ndern, so w&uuml;rde sich
+            <span style="font-family: 'courier new',courier,monospace">text</span> 
+            ebenfalls dem neuen Wert anpassen. Man sollte vorsichtig 
+            mit Referenzen umgehen, ihr Wirken ist in komplizierten Verh&auml;ltnissen 
+            schwer vorauszusehen.</p>
+		<p>
+			Es k&ouml;nnen ebenfalls von allen Variabeltypen Listen, so genannte 
+            Arrays, erstellt werden:</p>
+		<p>
+			<span style="font-family:courier new,courier,monospace;">{<span style="color: rgb(0, 0, 255);">Int </span>
+            <font color="#FF0000">6</font>}<span style="color: rgb(0, 0, 255);">&nbsp;</span>liste</span><span style="color: rgb(0, 128, 0); font-family:courier new,courier,monospace">&nbsp;&nbsp; 
+            //
+            </span>
+            <span style="font-family: 'courier new',courier,monospace; color: #008000">
+            erstellt eine Liste aus Ganzzahlen<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            // mit L&auml;nge 6<br>
+            </span>
+			<span style="font-family:courier new,courier,monospace;">{</span><span style="font-family:courier new,courier,monospace;">liste</span><span style="color: rgb(0, 128, 0); font-family:courier new,courier,monospace">
+            </span><font color="#FF0000">
+            <span style="font-family: 'courier new',courier,monospace">3</span></font><span style="font-family:courier new,courier,monospace;">}<span style="color: rgb(0, 0, 255);">&nbsp;</span></span><span style="font-family: 'courier new',courier,monospace">=
+            <font color="#FF0000">24</font></span><span style="font-family: 'courier new',courier,monospace; color: #008000">&nbsp; 
+            // setzt das vierte (!) Element gleich 24<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            // ({liste<span style="color: #008000;font-family:courier new,courier,monospace">
+            </span>0} w&auml;re das erste)</span></p>
+		<p>
+			Ausdr&uuml;cke k&ouml;nnen entweder einfach Zahlen, Terme oder auch andere 
+            Variablen sein:</p>
+		<p>
+			<span style="font-family:courier new,courier,monospace;"><span style="color: rgb(0, 0, 255);">Int&nbsp;</span>seventeen 
+            = </span> 
+            <span style="color: rgb(255, 0, 0); font-family:courier new,courier,monospace">5 </span> 
+            <span style="font-family:courier new,courier,monospace">+</span><span style="color: rgb(255, 0, 0); font-family:courier new,courier,monospace"> 
+            2 </span> <span style="font-family:courier new,courier,monospace">*</span><span style="color: rgb(255, 0, 0); font-family:courier new,courier,monospace"> </span> 
+            <span style="font-family:courier new,courier,monospace">six<span style="color: rgb(0, 128, 0);"> // 
+            5 + 2 * 6 ergibt 17<br>
+            </span></span>
+			<span style="font-family:courier new,courier,monospace;">
+            <span style="color: #0000FF">String</span> aAndB =
+            <font color="#000080">&quot;a&quot;</font> + <font color="#000080">&quot;b&quot;</font></span><span style="color: rgb(0, 128, 0); font-family:courier new,courier,monospace"> 
+            //
+            </span>
+            <span style="font-family: 'courier new',courier,monospace; color: #008000">
+            ergibt &quot;ab&quot;</span></p>
+		<p>
+			Es sind 4 Operatoren definiert, welche direkt auf die Variablen angewendet werden k&ouml;nnen 
+            und diese ver&auml;ndern: <span style="font-family:courier new,courier,monospace;">+=, -=, *=, /=</span> und <span style="font-family:courier new,courier,monospace;">^=</span></p>
+		<p>
+			Ebenfalls k&ouml;nnen in Termen folgende Operatoren eingesetzt werden:
+            <span style="font-family: 'courier new',courier,monospace">+</span>,
+            <span style="font-family: 'courier new',courier,monospace">-</span>,
+            <span style="font-family: 'courier new',courier,monospace">*</span>,
+            <span style="font-family: 'courier new',courier,monospace">/</span>,
+            <span style="font-family: 'courier new',courier,monospace">^</span>,
+            <span style="font-family: 'courier new',courier,monospace; color: #0000FF">
+            and</span>,
+            <span style="font-family: 'courier new',courier,monospace; color: #0000FF">
+            or</span>,
+            <span style="font-family: 'courier new',courier,monospace; color: #0000FF">
+            xor</span></p>
+		<p>
+			Die letzten drei Operatoren sind als logische Operatoren f&uuml;r 
+            Boolean-Datentypen gedacht, k&ouml;nnen jedoch auch auf Variablen vom Typ 
+            Integer angewendet werden. Dann wird einfach Bit f&uuml;r Bit mit dem 
+            Operator verkn&uuml;pft.</p>
+		<p>
+			F&uuml;r alle Ausdr&uuml;cke mit Operatoren gilt: Potenzieren hat Vorrang
+			vor Multiplikation und Division hat Vorrang vor Addition und Subtraktion
+			hat Vorrang vor logischen Operatoren.</p>
+		<p>
+			<span style="font-family:courier new,courier,monospace;">five += <span style="color: rgb(255, 0, 0);">3</span> <span style="color: rgb(0, 128, 0);">// 
+            ergibt nun 8</span><br />
+			six *= <span style="color: rgb(255, 0, 0);">1.5 </span><span style="color: rgb(0, 128, 0);">// 
+            ergibt nun 9.0<br>
+            </span>aAndB += <font color="#000080">&quot; &lt;-- this was a and b&quot;</font></span></p>
+		<p>
+			Achtung: zwischen den Operatoren und Ausdr&uuml;cken muss sich <u>immer</u> 
+            ein Leerzeichen befinden.</p>
+		<p>
+			Es gibt einige spezielle Zeichen in Strings:</p>
+		<table border="2" style="width: 100%;" frame="void">
+				<tr>
+					<td>
+						<font color="#000080">
+                        <span style="font-family: 'courier new',courier,monospace">
+                        &quot;\&quot;&quot;</span></font></td>
+					<td>
+						das Anf&uuml;hrungszeichen &quot;</td>
+				</tr>
+				<tr>
+					<td>
+						<font color="#000080">
+                        <span style="font-family: 'courier new',courier,monospace">
+                        &quot;\\&quot;</span></font></td>
+					<td>
+						ein Backslash \</td>
+				</tr>
+				<tr>
+					<td>
+						<font color="#000080">
+                        <span style="font-family: 'courier new',courier,monospace">
+                        &quot;\n&quot;</span></font></td>
+					<td>
+						ein Zeilenumbruch</td>
+				</tr>
+				<tr>
+					<td>
+						<font color="#000080">
+                        <span style="font-family: 'courier new',courier,monospace">
+                        &quot;\t&quot;</span></font></td>
+					<td>
+						Tabulatoreinschub</td>
+				</tr>
+		</table>
+		<h4>
+			Konstanten</h4>
+		<p>
+			In Turtle++ sind verschiedene mathematische Konstanten vordefiniert, 
+            welche wie Variablen verwendet werden k&ouml;nnen:</p>
+		<table border="2" style="width: 100%;" frame="void">
+				<tr>
+					<td>
+						<font face="Courier New" color="#800000">PI</font></td>
+					<td>
+						die Kreiszahl &#960; = 3.14159265359</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#800000">TWO_PI</font></td>
+					<td>
+						2 * &#960; (= 6.28318530718)</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#800000">HALF_PI</font></td>
+					<td>
+						0.5 * &#960; (= 1.57079632679)</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#800000">QUARTER_PI</font></td>
+					<td>
+						0.25 * &#960; (= 0.78539816339)</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#800000">E</font></td>
+					<td>
+						Die eulersche Zahl e = 2.71828182846</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#800000">SQRT2</font></td>
+					<td>
+						Die Quadratwurzel aus 2 (= 1.41421356237)</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#800000">SQRT3</font></td>
+					<td>
+						Die Quadratwurzel aus 3 (= 1.73205080757)</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#800000">GoldenRatio</font></td>
+					<td>
+						Der goldene Schnitt &#934; = 1.61803398875</td>
+				</tr>
+		</table>
+		<h3>
+			Kommentare</h3>
+		<p>
+			Wie in den Beispielen schon gezeigt, kann man Kommentare mit der 
+            Zeichenfolge
+            <span style="color: rgb(0, 128, 0); font-family: 'courier new',courier,monospace">
+            //</span> einleiten. Kommentare gehen bis Ende der Linie. Kommentare erscheinen gr&uuml;n im Editorfenster.</p>
+		<h3>
+			Statements</h3>
+		<h4>
+			If-Statement</h4>
+		<p>
+			Mit dem If-Statement k&ouml;nnen Bedingungen gestellt werden, ob ein gewisser Teil des Codes ausgef&uuml;hrt wird.</p>
+		<p>
+			<span style="font-family:courier new,courier,monospace;"><span style="color: rgb(0, 0, 255);">Float&nbsp;</span>five&nbsp;=<span style="color: rgb(0, 0, 255);">&nbsp;</span><span style="color: rgb(255, 0, 0);">5</span><br />
+			<span style="color: rgb(0, 0, 255);">If</span>&nbsp;five &lt; <span style="color: rgb(255, 0, 0);">20</span><br />
+			&nbsp;&nbsp;<span style="color: rgb(0, 128, 0);">//<br />
+			&nbsp; // dieser Abschnitt hier wird nun nur<br />
+			&nbsp; //&nbsp;ausgef&uuml;hrt, wenn five kleiner als 20 ist<br />
+&nbsp;&nbsp;// (er wird also ausgef&uuml;hrt)<br />
+			&nbsp; //</span><br />
+			<span style="color: rgb(0, 0, 255);">Else</span></span><br />
+			<span style="font-family:courier new,courier,monospace;"><span style="color: rgb(0, 128, 0);">&nbsp;&nbsp;//<br />
+			&nbsp; // dieser Abschnitt hier wird hingegen<br />
+			&nbsp; //&nbsp;genau dann ausgef&uuml;hrt, wenn five nicht <br />
+&nbsp;&nbsp;// kleiner als 20 ist<br />
+			&nbsp; //</span></span><br />
+			<span style="font-family:courier new,courier,monospace; color: rgb(0, 0, 255);">End If</span></span></p>
+		<p>
+			Es sind&nbsp;<span style="font-family:courier new,courier,monospace;">&lt;, &gt;, &lt;=, &gt;=</span><span style="font-family:courier new,courier,monospace;">, 
+            !=</span>&nbsp;und&nbsp;<span style="font-family:courier new,courier,monospace;">== </span>m&ouml;glich als Vergleichsoperatoren.</p>
+		<h4>
+			Repeat-Statement</h4>
+		<p>
+			Mit dem Repeat-Statement kann ein Codeabschnitt mehrmals hintereinander ausgef&uuml;hrt werden. Als Argument kann eine Konstante oder Variable eingesetzt werden.</p>
+		<p>
+			<span style="font-family:courier new,courier,monospace;"><span style="color: rgb(0, 0, 255);">Int&nbsp;</span>repetitions&nbsp;=<span style="color: rgb(0, 0, 255);">&nbsp;</span><font color="#ff0000">24</font><br />
+			<span style="color: rgb(0, 0, 255);">Repeat</span>&nbsp;repetitions<br />
+			&nbsp;&nbsp;<span style="color: rgb(0, 128, 0);">//<br />
+			&nbsp; // dieser Abschnitt hier wird nun 24<br />
+			&nbsp; // mal in Folge ausgef&uuml;hrt.<br />
+			&nbsp; //</span><br />
+			<span style="color: rgb(0, 0, 255);">End Repeat</span></span></p>
+		<h4>
+			While-Statement</h4>
+		<p>
+			Mit dem While-Statement wird ein Codeabschnitt solange ausgef&uuml;hrt, bis eine gewisse Bedingung erf&uuml;llt ist.</p>
+		<p>
+			<span style="font-family:courier new,courier,monospace;"><span style="color: rgb(0, 0, 255);">Int&nbsp;</span>a&nbsp;=<span style="color: rgb(0, 0, 255);">&nbsp;</span><font color="#FF0000">1</font><br />
+			<span style="color: rgb(0, 0, 255);">While</span>&nbsp;a &lt; <font color="#ff0000">20</font><br />
+			&nbsp;&nbsp;<span style="color: #008000">//</span><span style="color: rgb(0, 128, 0);"><br />
+			&nbsp; // dieser Abschnitt hier wird nun ausgef&uuml;hrt<br />
+			&nbsp; // solange a &lt; als 20 ist. a wird jeden Durchlauf<br>
+&nbsp;&nbsp;// verdoppelt.<br />
+			&nbsp; //</span><br />
+			&nbsp;&nbsp;a += a<br />
+			<span style="color: rgb(0, 0, 255);">End While</span></span></p>
+			<p>
+			Es sind&nbsp;<span style="font-family:courier new,courier,monospace;">&lt;, &gt;, &lt;=, &gt;=, 
+            !=</span>&nbsp;und&nbsp;<span style="font-family:courier new,courier,monospace;">==</span> m&ouml;glich als Vergleichsoperatoren.</p>
+		<h4>
+			Sub-Statement und Function-Statement</h4>
+		<p>
+			Mit dem Sub-Statement k&ouml;nnen Subroutinen definiert werden. Alles, was sich innnerhalb eines Sub-Blockes befindet, wird nicht standardm&auml;ssig bei einem Klick auf &quot;execute&quot; 
+            ausgef&uuml;hrt, sondern definiert einen eigenen Befehl, welcher zuerst aufgerufen werden 
+            muss.<br />
+			Subroutinen werden mit einem Schl&uuml;sselwort &quot;Sub&quot; gefolgt vom Namen der Funktion und einer Beliebigen Anzahl an Parametern.</p>
+		<p>
+			<span style="font-family:courier new,courier,monospace;">rechterWinkel<span style="color: rgb(0, 0, 255);">&nbsp;</span><font color="#ff0000">200 
+            100 </font></span> 
+            <span style="color: rgb(0, 128, 0); font-family:courier new,courier,monospace">
+            // rechterWinkel ist unten definiert</span><span style="font-family:courier new,courier,monospace;"><br />
+			<span style="color: rgb(0, 0, 255);">Sub</span>&nbsp;rechterWinkel laenge1 
+            laenge2<br />
+			&nbsp; <span style="color: rgb(0, 0, 255);">Forward</span> laenge1 <span style="color: rgb(0, 128, 0);">
+            // laenge ist der Parameter f&uuml;r diese Funktion mitgegeben</span><br />
+			&nbsp; <span style="color: rgb(0, 0, 255);">Right</span> <span style="color: rgb(255, 0, 0);">90</span><br />
+			&nbsp; <span style="color: rgb(0, 0, 255);">Forward</span> laenge2 <span style="color: rgb(0, 128, 0);">// 
+            In diesem Beispiel ist laenge1 = 200 und laenge2 = 100</span><br />
+			<span style="color: rgb(0, 0, 255);">End Sub</span></span></p>
+		<p>
+			Ein Spezialfall des Sub-Statements bildet das Function-Statement. Es 
+            kann &uuml;berall verwendet werden, wo ein Sub-Statement verwendet werden 
+            kann, jedoch kann es zus&auml;tzlich noch einen Wert zur&uuml;ckgeben. 
+            Eine Funktion wird mit eckigen Klammern aufgerufen (Es ist auch 
+            m&ouml;glich sie wie einen Befehl oder eine &quot;Sub&quot; 
+            aufzurufen).</p>
+		<p>
+			<span style="font-family:courier new,courier,monospace;">
+            <font color="#0000FF">Forward</font> [verdopple
+            <font color="#FF0000">20</font>] </span> 
+            <span style="color: rgb(0, 128, 0); font-family:courier new,courier,monospace">
+            // entspricht &quot;Forward 40&quot;</span><span style="font-family:courier new,courier,monospace;"><br />
+			<span style="color: #0000FF">Function</span>&nbsp;verdopple wert<br />
+			&nbsp; </span>
+			<span style="font-family:courier new,courier,monospace;">verdopple = 
+            wert + wert<br />
+			<span style="color: rgb(0, 0, 255);">End  </span></span>
+			<span style="font-family:courier new,courier,monospace;">
+            <span style="color: #0000FF">Function</span></span></p>
+		<p>
+			Aus einer Subroutine kann mit&nbsp;<span style="color: rgb(0, 0, 255); font-family:courier new,courier,monospace">Exit Sub&nbsp;</span>oder<span style="color: rgb(0, 0, 255); font-family:courier new,courier,monospace"> 
+            Exit Function </span>ausgetreten werden.</p>
+		<h4>
+			Mathematische Funktionen</h4>
+		<p>
+			Turtle++ beinhaltet einige mathematische Funktionen von Grund auf. Sie 
+            k&ouml;nnen ebenfalls mit eckigen Klammern aufgerufen werden.</p>
+		<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;" height="409">
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">sqrt</font></td>
+					<td height="18">
+						berechnet die Quadratwurzel einer Zahl</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">sin</font></td>
+					<td height="18">
+						die Sinusfunktion (Argument in Radianten)</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">cos</font></td>
+					<td height="18">
+						die Kosinusfunktion (Argument in Radianten)</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">tan</font></td>
+					<td height="18">
+						die Tangensfunktion (Argument in Radianten)</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">cot</font></td>
+					<td height="18">
+						die Kotangensfunktion (Argument in Radianten)</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">exp</font></td>
+					<td height="18">
+						die Exponentialfunktion (e^x)</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">asin</font></td>
+					<td height="18">
+						der Arkussinus</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">acos</font></td>
+					<td height="18">
+						der Arkuskosinus</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">atan</font></td>
+					<td height="18">
+						der Arkustangens</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">atan2</font></td>
+					<td height="18">
+						Erweiterung des Arkustangens, um aus zwei kartesischen 
+                        Koordinaten den Winkel f&uuml;r Polarkoordinaten zu erhalten 
+                        (2 Argumente: y, x)</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">ln</font></td>
+					<td height="18">
+						der nat&uuml;rliche Logarithmus (Logarithmus zur Basis e)</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">lg</font></td>
+					<td height="18">
+						der Logarithmus zur Basis 10</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">log</font></td>
+					<td height="18">
+						der Logarithmus zu einer beliebigen Basis (zwei 
+                        Argumente: Basis, Wert)</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">sinh</font></td>
+					<td height="18">
+						der Sinus Hyperbolikus</td>
+				</tr>
+				<tr>
+					<td height="13">
+						<font face="Courier New" color="#333333">cosh</font></td>
+					<td height="13">
+						der Kosinus Hyperbolikus</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">tanh</font></td>
+					<td height="18">
+						der Tangens Hyperbolikus</td>
+				</tr>
+                <tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">max</font></td>
+					<td height="18">
+						berechnet das Maximum von zwei Werten</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">min</font></td>
+					<td height="18">
+						berechnet das Minimum von zwei Werten</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">rand</font></td>
+					<td height="18">
+						Zufallszahl; zwischen 0 und 1, wenn kein Argument 
+                        angegeben, zwischen 0 und dem Argument, falls eines 
+                        angegeben, oder zwischen beiden Argumenten, falls zwei 
+                        angegeben</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">nanos</font></td>
+					<td height="18">
+						gibt die Anzahl vergangene Nanosekunden seit einem 
+                        gewissen Zeipunkt an</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">year</font></td>
+					<td height="18">
+						gibt das aktuelle Jahr</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">month</font></td>
+					<td height="18">
+						gibt den aktuellen Monat (Zahl von 1 - 12)</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">day</font></td>
+					<td height="18">
+						gibt den Tag des Monats</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">hour</font></td>
+					<td height="18">
+						gibt die aktuelle Stunde</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">minute</font></td>
+					<td height="18">
+						gibt die aktuelle Minute</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">second</font></td>
+					<td height="18">
+						gibt die aktuelle Sekunde</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">millisecond</font></td>
+					<td height="18">
+						gibt die Anzahl Millisekunden, die seit dem letzten 
+                        Sekundenwechsel vergangen sind</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">typename</font></td>
+					<td height="18">
+						gibt Informationen &uuml;ber den Typ einer Variable</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">input</font></td>
+					<td height="18">
+						liest Text aus der Konsoleneingabe ein. (blockt die weitere
+						Ausf&uuml;hrung des Programmes solange nichts eingegeben  wird)</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">isnumeric</font></td>
+					<td height="18">
+						entscheidet, ob das Argument einen numerischen Wert hat</td>
+				</tr>
+                <tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">toCharArray</font></td>
+					<td height="18">
+						verwandelt einen String in einen Array aus Buchstaben</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">length</font></td>
+					<td height="18">
+						gibt die L&auml;nge eines Arrays</td>
+				</tr>
+                <tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">width</font></td>
+					<td height="18">
+						gibt die Breite des Fensters</td>
+				</tr>
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#333333">height</font></td>
+					<td height="18">
+						gibt die Höhe des Fensters</td>
+				</tr>
+				</table>
+		<h3>
+			Befehle</h3>
+		<p>
+			Befehle werden als ein Schl&uuml;sselwort, teilweise mit Argumenten dargestellt. Die Argumente werden durch Leerzeichen getrennt. 
+            Befehle werden blau hervorgehoben.</p>
+		<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+			<tbody>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">Reset</font></td>
+					<td>
+						setzt das Programm zur&uuml;ck</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">Clear</font></td>
+					<td>
+						setzt den Bildschirm zur&uuml;ck</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">ClearOutput</font></td>
+					<td>
+						setzt den Konsolenoutput zur&uuml;ck</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">PenUp </font>
+						<font face="Courier New">/</font><font face="Courier New" color="#0000FF"> 
+                        PU</font></td>
+					<td>
+						schaltet die Zeichenfunktion aus, die Schildkr&ouml;te zeichnet nun nichts mehr</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">PenDown </font>
+						<font face="Courier New">/</font><font face="Courier New" color="#0000FF"> 
+                        PD</font></td>
+					<td>
+						schaltet die Zeichenfunktion ein, die Schildkr&ouml;te zeichnet nun wieder</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">AntialiasingOn</font></td>
+					<td>
+						schaltet das Anti-Aliasing an</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">AntialiasingOff</font></td>
+					<td>
+						schaltet das Anti-Aliasing aus</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">HideTurtle </font>
+						<font face="Courier New">/</font><font face="Courier New" color="#0000FF"> HT</font></td>
+					<td>
+						die Schildkr&ouml;te wird ausgeblendet</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">ShowTurtle </font>
+						<font face="Courier New">/</font><font face="Courier New" color="#0000FF"> ST</font></td>
+					<td>
+						die Schildkr&ouml;te wird wieder angezeigt</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">PushPostition</font></td>
+					<td>
+						pusht die aktuelle Position auf einen Stack</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">PopPosition</font></td>
+					<td>
+						poppt die oberste Position vom Stack</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">PushMatrix</font></td>
+					<td>
+						pusht die aktuelle Transformationsmatrix auf einen Stack</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">PopMatrix</font></td>
+					<td>
+						poppt die oberste Transformationsmatrix vom Stack</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">ResetMatrix </font>
+						<font face="Courier New">/</font><font face="Courier New" color="#0000FF"> LoadIdentity</font></td>
+					<td>
+						setzt die Transformationsmatrix zur&uuml;ck</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">ResetRotation</font></td>
+					<td>
+						setzt die Schildkr&ouml;te so, dass sie nach rechts schaut</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">Print </font>
+						<font face="Courier New">x ...</font></td>
+					<td>
+						schreibt x in die Konsole, es k&ouml;nnen beliebig viele 
+                        Parameter angegeben werden</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">Forward </font>
+						<font face="Courier New">x /</font><font face="Courier New" color="#0000FF"> 
+                        FD </font>
+						<font face="Courier New">x</font></td>
+					<td>
+						bewegt die Schildkr&ouml;te um x vorw&auml;rts</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">Backward </font>
+						<font face="Courier New">x /</font><font face="Courier New" color="#0000FF"> 
+                        BW </font>
+						<font face="Courier New">x</font></td>
+					<td>
+						bewegt die Schildkr&ouml;te um x r&uuml;ckw&auml;rts</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">Right </font>
+						<font face="Courier New">x /</font><font face="Courier New" color="#0000FF"> 
+                        RT </font>
+						<font face="Courier New">x</font></td>
+					<td>
+						dreht die Schildkr&ouml;te nach rechts um x&deg;</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">Left </font>
+						<font face="Courier New">x /</font><font face="Courier New" color="#0000FF"> 
+                        LT </font>
+						<font face="Courier New">x</font></td>
+					<td>
+						dreht die Schildkr&ouml;te nach links um x&deg;</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">rotate </font>
+						<font face="Courier New">x</font></td>
+					<td>
+						rotiert das gesamte Koordinatensystem um x&deg;</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">SetPosition </font>
+						<font face="Courier New">x y /</font><font face="Courier New" color="#0000FF"> SetPos </font>
+						<font face="Courier New">x y</font></td>
+					<td>
+						setzt die Schildkr&ouml;te nach (x, y)</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">Skew </font>
+						<font face="Courier New">x y</font></td>
+					<td>
+						erzeugt eine Scherung f&uuml;r das Koordinatensystem</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">Translate </font>
+						<font face="Courier New">x y</font></td>
+					<td>
+						erzeugt eine Translation f&uuml;r das Koordinatensystem</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">Scale </font>
+						<font face="Courier New">x y</font></td>
+					<td>
+						skaliert das Koordinatensystem</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">Point </font>
+						<font face="Courier New">x y</font></td>
+					<td>
+						zeichnet einen Punkt an (x, y)</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">Clear</font><font face="Courier New"> 
+                        r g b</font></td>
+					<td>
+						setzt den Bildschirm auf die Farbe der angegebenen 
+                        RGB-Werten</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">PenColor </font>
+						<font face="Courier New">r g b</font></td>
+					<td>
+						setzt die aktuelle Zeichenfarbe zu den gegebenen RGB-Werten</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">Line </font>
+						<font face="Courier New">x1 y1 x2 y2</font></td>
+					<td>
+						zeichnet eine Linie von (x1, y1) nach (x2, y2)</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">Triangle </font>
+						<font face="Courier New">x1 y1 x2 y2 x3 y3</font></td>
+					<td>
+						zeichnet ein Dreieck mit den Eckpunkten (x1, y1), (x2, y2) und&nbsp;(x3, y3)</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#0000FF">Polygon </font>
+						<font face="Courier New">x1 y1 x2 y2 ...</font></td>
+					<td>
+						zeichnet ein Polygon mit den angegebenen Eckpunkten 
+                        (ben&ouml;tigt eine gerade Anzahl an Argumenten)</td>
+				</tr>
+			</tbody>
+		</table>
+            <h3>R&uuml;ckruffunktionen</h3>
+            <p>Einige Funktionen werden automatisch aufgerufen. Je nach Name der 
+            Funktion werden sie zu verschiedenen Events aufgerufen. (Achtung: 
+            die Mauseventfunktionen <u>m&uuml;ssen</u> zwei Parameter besitzen. 
+            Ansonsten werden sie nicht als Eventfunktionen erkannt.)</p>
+		<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;" height="155">
+				<tr>
+					<td height="18">
+						<font face="Courier New" color="#008282">Draw</font></td>
+					<td height="18">
+						wird 60 mal pro Sekunde aufgerufen. Es kann jedes mal 
+                        etwas neues gezeichnet werden.</td>
+				</tr>
+				<tr>
+					<td height="36">
+						<font face="Courier New" color="#008282">MouseClicked</font><font face="Courier New"> 
+                        x y</font></td>
+					<td height="36">
+						wird aufgerufen, wenn in den Zeichenbereich geklickt 
+                        wird. x und y sind die Koordinaten, an welchen sich die 
+                        Maus befindet.</td>
+				</tr>
+				<tr>
+					<td height="36">
+						<font face="Courier New" color="#008282">MousePressed</font><font face="Courier New"> 
+                        x y</font></td>
+					<td height="36">
+						wird aufgerufen, wenn die Maustaste im Zeichenbereich 
+                        gedr&uuml;ckt wird. x und y sind die Koordinaten, an welchen 
+                        sich die Maus befindet.</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="Courier New" color="#008282">MouseReleased</font><font face="Courier New"> 
+                        x y</font></td>
+					<td>
+						wird aufgerufen, wenn die Maustaste im Zeichenbereich 
+                        losgelassen wird. x und y sind die Koordinaten, an 
+                        welchen sich die Maus befindet.</td>
+				</tr>
+            <tr>
+					<td>
+						<font face="Courier New" color="#008282">MouseMoved</font><font face="Courier New"> 
+                        x y</font></td>
+					<td>
+						wird aufgerufen, wenn die Maus im Zeichenbereich bewegt 
+                        wird. x und y sind die Koordinaten, an welchen sich die 
+                        Maus befindet.</td>
+				</tr>
+            <tr>
+					<td>
+						<font face="Courier New" color="#008282">MouseDragged</font><font face="Courier New"> 
+                        x y</font></td>
+					<td>
+						wird aufgerufen, wenn die Maustaste im Zeichenbereich 
+                        gedr&uuml;ckt gehalten und gleichzeitig bewegt wird. x und y 
+                        sind die Koordinaten, an welchen sich die Maus befindet.</td>
+				</tr>
+		</table>
+            <h3>Konsole</h3>
+            <p>Das Konsolenfenster kann zur Ein- und Ausgabe von Text benutzt 
+            werden. Mit der <font face="Courier New">[</font><font face="Courier New" color="#333333">input</font><font face="Courier New">]</font>-Funktion 
+            kann Text eingelesen werden, mit
+            <font face="Courier New" color="#0000FF">print</font> kann etwas 
+            geschrieben werden. In der Konsole k&ouml;nnen auch einzelne 
+            Programmbefehle ausgef&uuml;hrt werden. Diese sollten mit einem Slash &quot;/&quot; 
+            eingeleitet werden. M&ouml;chte man Text eingeben, der mit einem Slash 
+            startet, so muss man mit einem Doppelslash starten &quot;//&quot;.</p>
+            <p>Ebenfalls kann mit &quot;<font face="Courier New" color="#008000">\cls</font>&quot; 
+            oder &quot;<font face="Courier New" color="#008000">\clear</font>&quot; die 
+            Konsolenausgabe gel&ouml;scht werden.</p>
+    </body>
+</html>

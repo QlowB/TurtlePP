@@ -1,0 +1,23 @@
+boolean needInput = true
+int value
+while needInput
+  print "Please enter a number: "
+  string in = [input]
+  if [isnumeric in]
+    value = in
+    needInput = false
+  end if
+end while
+
+
+print "Factorial of " + value _
+  + " is " + [factorial value]
+
+
+function factorial n
+  if n <= 1
+    factorial = 1
+    exit function
+  end if
+  factorial = n * [factorial n - 1]
+end function

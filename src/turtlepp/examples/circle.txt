@@ -1,0 +1,9 @@
+reset
+setpos [width] / 2 [height] / 2 - 200
+resetRotation
+loadIdentity
+
+repeat 360
+  forward 4
+  right 1
+end repeat

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<examples>
+	<example name="Tree" path="examples/tree.txt" />
+	<example name="Circle" path="examples/circle.txt" />
+	<example name="Spiral" path="examples/spiral.txt" />
+	<example name="Color Spiral" path="examples/colorSpiral.txt" />
+	<example name="Curve" path="examples/curve.txt" />
+	<example name="Sierpinski Triangle" path="examples/sierpinskiTriangle.txt" />
+	<example name="Mandelbrot" path="examples/mandelbrot.txt" />
+	<example name="Pythagoras Tree" path="examples/pythagorasTree.txt" />
+	<example name="Randomized Pythagoras Tree" path="examples/randomizedPythagorasTree.txt" />
+	<example name="Levy C Curve" path="examples/levyCCurve.txt" />
+	<example name="Koch Snowflake" path="examples/kochSnowflake.txt" />
+	<example name="Drawing" path="examples/drawing.txt" />
+	<example name="Brush" path="examples/brush.txt" />
+	<example name="Factorial" path="examples/factorial.txt" />
+	<example name="Brainfuck Interpreter (buggy)" path="examples/brainfuck.txt" />
+</examples>

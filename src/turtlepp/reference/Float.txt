@@ -1,0 +1,37 @@
+<p>
+			<span style="font-family:courier new,courier,monospace;">
+			<span style="color: rgb(0, 0, 255);">Float</span>&nbsp;</span>represents a 
+            real value. It can be initialized by 
+            assigning any value to it.</p>
+
+		<p>
+			Example:</p>
+		<p>
+			<span style="font-family:courier new,courier,monospace;">
+			<span style="color: rgb(0, 0, 255);">Float</span>&nbsp;threehalf</span><span style="font-family:courier new,courier,monospace;"><span style="color: rgb(0, 0, 255);"> </span>=<span style="color: rgb(0, 0, 255);"> </span>
+            <span style="color: #FF0000">1.5</span></span></p>
+		<p>
+			However it is also possible to assign
+            <span style="font-family: 'courier new',courier,monospace; color: #0000FF">
+            String</span><span style="font-family:courier new,courier,monospace;">&nbsp;</span>values to a 
+            variable of type
+			<span style="font-family:courier new,courier,monospace;">
+			<span style="color: rgb(0, 0, 255);">Float</span></span>. These are implicitly casted 
+            to a float. Following expressions do the same:</p>
+		<p>
+			<span style="font-family:courier new,courier,monospace;">
+			<span style="color: rgb(0, 0, 255);">Float</span>&nbsp;threehalf</span><span style="color: rgb(0, 0, 255); font-family:courier new,courier,monospace"> </span>
+			<span style="font-family:courier new,courier,monospace;">=<span style="color: rgb(0, 0, 255);"> </span>
+            <span style="color: #FF0000">1.5<br>
+            </span></span>
+			<span style="font-family:courier new,courier,monospace;">
+			<span style="color: rgb(0, 0, 255);">Float</span>&nbsp;threehalf</span><span style="color: rgb(0, 0, 255); font-family:courier new,courier,monospace"> </span>
+			<span style="font-family:courier new,courier,monospace;">=<span style="color: rgb(0, 0, 255);"> </span>
+            <span style="font-family: 'courier new',courier,monospace">
+            <font color="#000080">&quot;1.5&quot;</font></span></span></p>
+
+	    <h4>Range</h4>
+        <p>
+			<span style="font-family:courier new,courier,monospace;">
+			<span style="color: rgb(0, 0, 255);">Float</span>&nbsp;</span>is stored 
+            as a 64 bit floating point number (double precision).</p>

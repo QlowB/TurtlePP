@@ -1,0 +1,122 @@
+print "Please enter program code."
+string in = [input]
+print "Please enter input data."
+string din = [input]
+{char 0} code
+{char 0} dataIn
+code = [toCharArray in]
+dataIn = [toCharArray din]
+int codeLength = [length code]
+
+{char 1024} data
+int instPtr = 0
+int dataPtr = 0
+int inputPtr = 0
+
+string out = ""
+
+while true
+  char instruction = {code instPtr}
+  
+  if instruction == '>' 
+    incDataPtr
+  end if
+  
+  if instruction == '<'
+    decDataPtr
+  end if
+  
+  if instruction == '+'
+    {data dataPtr} += 1
+    if {data dataPtr} > 255
+      {data dataPtr} = 0
+    end if
+  end if
+  
+  if instruction == '-'
+    if {data dataPtr} == 0
+      {data dataPtr} = 256
+    end if
+    {data dataPtr} -= 1
+  end if
+  
+  if instruction == '.'
+    out += {data dataPtr}
+  end if
+  
+  if instruction == ','
+    if inputPtr >= [length dataIn]
+      {data dataPtr} = 0
+    else
+      {data dataPtr} = {dataIn inputPtr}
+      inputPtr += 1
+    end if
+  end if
+  
+  if instruction == '['
+    if {data dataPtr} == 0
+      skipSection
+    end if
+  end if
+  
+  if instruction == ']'
+    if {data dataPtr} != 0
+      repeatSection
+    end if
+  end if
+  
+  
+  
+  instPtr += 1
+  if instPtr >= codeLength
+    exit while
+  end if
+end while
+
+print out
+
+
+sub incDataPtr
+  dataPtr += 1
+  if dataPtr >= [length data]
+    dataPtr -= [length data]
+  end if
+end sub
+
+sub decDataPtr
+  dataPtr -= 1
+  if dataPtr < 0
+    dataPtr += [length data]
+  end if
+end sub
+
+sub skipSection
+  int level = 1
+  instPtr += 1
+  while level > 0 and instPtr < codeLength
+    if {code instPtr} == '['
+      level += 1
+    end if
+    
+    if {code instPtr} == ']'
+      level -= 1
+    end if
+    instPtr += 1
+  end while
+end sub
+
+sub repeatSection
+  int level = 1
+  instPtr -= 1
+  while level > 0 and instPtr > 0
+    if {code instPtr} == '['
+      level -= 1
+    end if
+    
+    if {code instPtr} == ']'
+      level += 1
+    end if
+    
+    instPtr -= 1
+  end while
+end sub

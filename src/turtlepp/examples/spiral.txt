@@ -1,0 +1,9 @@
+reset
+
+float len = 0.1
+
+repeat 250
+  forward len
+  right 10
+  len *= 1.03 // len is getting longer each time
+end repeat

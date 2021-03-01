@@ -1,0 +1,26 @@
+reset
+setPosition [width] / 2 - 200 [height] / 2 - 100
+hideTurtle
+
+repeat 3
+  koch 400 5
+  right 120
+end repeat
+
+sub koch length depth
+  if depth < 1
+    forward length
+    exit sub
+  end if
+
+  int newdepth = depth - 1
+  float newlength = length / 3.0
+
+  koch newlength newdepth
+  left 60
+  koch newlength newdepth
+  right 120
+  koch newlength newdepth
+  left 60
+  koch newlength newdepth
+end sub

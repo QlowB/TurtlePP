@@ -1,0 +1,25 @@
+//
+// This example generates a white 
+// background on which the user
+// can draw figures using the mouse
+//
+
+int lastX = 0
+int lastY = 0
+
+reset
+clear 255 255 255
+hideTurtle
+
+sub mouseDragged x y
+  antialiasingOn
+  penColor 0 0 0
+  line x y lastX lastY
+  lastX = x
+  lastY = y
+end sub
+
+sub mouseMoved x y
+  lastX = x
+  lastY = y
+end sub

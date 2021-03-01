@@ -1,0 +1,22 @@
+reset
+translate [width] / 2 [height] / 2
+float size = [max [width] / 2 [height] / 2]
+while size > 1.0
+  int r = [sin size * 0.1] _
+    * 127 + 127
+  int g = [cos size * 0.02] _
+    * 127 + 127
+  int b = [sin size * 0.04] _
+    * (-127) + 127
+  penColor r g b
+  rectangle size
+  rotate 0.4
+  size *= 0.992
+end while
+
+sub rectangle size
+  triangle (-size) (-size) size _
+    (-size) size size
+  triangle (-size) (-size) (-size) _
+    size size size
+end sub

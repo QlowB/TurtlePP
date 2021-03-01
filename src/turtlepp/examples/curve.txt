@@ -1,0 +1,24 @@
+reset
+setpos 100 100
+right 45
+
+curv 500 * sqrt2 0 255
+
+sub curv len cbeg cend
+  if len < 1.5
+    penColor 255 - cbeg 128 + 127 * [sin cbeg / 20.0] cbeg
+    forward len
+    exit sub
+  end if
+  
+  int c1 = (cbeg * 3 + cend) / 4
+  int c2 = (cbeg + cend * 3) / 4
+  
+  left 45
+  curv len / SQRT2 / 2 cbeg c1 
+  right 90
+  curv len / SQRT2 c1 c2
+  left 90
+  curv len / SQRT2 / 2 c2 cend
+  right 45
+end sub

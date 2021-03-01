@@ -1,0 +1,43 @@
+// reset turtle and place it in the
+// upper left corner pointing to the center
+reset
+right 45
+setpos 100 100
+float angle
+
+// invoke mouseMoved for the first time
+mouseMoved 140 0
+
+// this subroutine is invoked every time
+// the mouse is moved
+sub mouseMoved x y
+  // calculate an angle
+  angle = (x - y) * 0.3
+  clear
+  antialiasingOn
+  
+  // start with the tree
+  tree 200.0
+end sub
+
+// recursive tree function
+sub tree len
+  // exit codition: if the size of
+  // the tree is smaller than 2, the
+  // tree is not worth drawing
+  if len < 2.0
+    exit sub
+  end if
+  
+  // draw branches
+  float newlen = len * 0.65
+  forward len
+  right angle
+  tree newlen
+  left angle + angle
+  tree newlen
+  right angle
+  penUp
+  backward len
+  penDown
+end sub

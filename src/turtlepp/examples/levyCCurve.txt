@@ -1,0 +1,17 @@
+reset
+setposition 180 400
+curv 300
+
+sub curv len
+  if len < 2.0
+    forward len
+    exit sub
+  end if
+
+  float newlen = len / SQRT2
+  left 45
+  curv newlen
+  right 90
+  curv newlen
+  left 45
+end sub

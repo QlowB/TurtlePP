@@ -1,0 +1,36 @@
+reset
+float angle = 35.0
+translate [width] / 2 + 20 [height] - 100
+hideTurtle
+antialiasingon
+tree 100.0
+
+sub tree size
+  if size < 0.5
+    exit sub
+  end if
+  
+  float h = [sin pi * angle / 180] * [cos pi * angle / 180] * size
+  float x = [cos pi * angle / 180]
+  x *= x * size
+  
+  pushMatrix
+  translate 0 (-size)
+  
+  penColor size + 30 255 - size * 10 + 30 0
+  rectangle size
+  
+  rotate -angle
+  tree size * [cos pi * angle / 180]
+  popMatrix
+  
+  pushMatrix
+  translate x (-h - size)
+  rotate -angle + 90
+  tree size * [sin pi * angle / 180]
+  popMatrix
+end sub
+
+sub rectangle size
+  polygon 0 0 size 0 size size 0 size
+end sub
